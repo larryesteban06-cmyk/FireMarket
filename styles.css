@@ -1,0 +1,946 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #0b0b0f;
+
+    color: #ffffff;
+
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+   ===================================================== */
+
+.contenedor {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+header {
+    background-color: #111116;
+
+    border-bottom: 1px solid #292933;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.encabezado {
+    min-height: 75px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo h1 {
+    color: #ff7a00;
+
+    font-size: 26px;
+}
+
+
+/* MENÚ */
+
+nav {
+    display: flex;
+
+    gap: 22px;
+}
+
+
+nav a {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #ff7a00;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px 8%;
+
+    /*
+       Fondo oscuro para que el texto
+       sea fácil de leer.
+    */
+
+    background:
+        linear-gradient(
+            rgba(8, 8, 12, 0.85),
+            rgba(8, 8, 12, 0.85)
+        ),
+        #111116;
+}
+
+
+.hero-contenido {
+    max-width: 750px;
+}
+
+
+.etiqueta {
+    color: #ff7a00;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.hero h2 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+}
+
+
+.hero h2 span {
+    color: #ff7a00;
+}
+
+
+.hero p {
+    color: #d2d2d2;
+
+    font-size: 20px;
+
+    max-width: 650px;
+}
+
+
+.hero-botones {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+
+.boton {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    border: none;
+}
+
+
+.principal {
+    background-color: #ff7a00;
+
+    color: #ffffff;
+}
+
+
+.principal:hover {
+    background-color: #ff9b3d;
+
+    transform: translateY(-3px);
+}
+
+
+.secundario {
+    border: 1px solid #ff7a00;
+
+    color: #ff7a00;
+}
+
+
+.secundario:hover {
+    background-color: #ff7a00;
+
+    color: #ffffff;
+}
+
+
+.comprar {
+    background-color: #ff7a00;
+
+    color: white;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.comprar:hover {
+    background-color: #ff9b3d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   BENEFICIOS
+   ===================================================== */
+
+.beneficios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 50px 7%;
+
+    background-color: #15151b;
+}
+
+
+.beneficio {
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+.beneficio span {
+    font-size: 35px;
+}
+
+
+.beneficio h3 {
+    color: #ff7a00;
+
+    margin: 10px 0;
+}
+
+
+.beneficio p {
+    color: #bdbdc4;
+}
+
+
+/* =====================================================
+   SECCIONES
+   ===================================================== */
+
+.seccion,
+.pagos,
+.contacto {
+    padding: 90px 7%;
+}
+
+
+.titulo {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+
+.titulo span {
+    color: #ff7a00;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.titulo h2 {
+    font-size: 40px;
+
+    margin: 10px 0;
+}
+
+
+.titulo p {
+    color: #aaaab2;
+}
+
+
+/* =====================================================
+   TARJETAS DE CUENTAS
+   ===================================================== */
+
+.tarjetas {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.tarjeta {
+    background-color: #15151b;
+
+    border: 1px solid #2b2b34;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff7a00;
+
+    box-shadow:
+        0 15px 40px
+        rgba(255, 122, 0, 0.12);
+}
+
+
+/* IMAGEN DE CADA CUENTA */
+
+.imagen-producto {
+    position: relative;
+}
+
+
+.imagen-producto img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+}
+
+
+.estado {
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    background-color: #1ca35c;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* INFORMACIÓN DE LA CUENTA */
+
+.contenido {
+    padding: 25px;
+}
+
+
+.contenido h3 {
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+.contenido p {
+    color: #aaaab2;
+}
+
+
+.contenido ul {
+    list-style: none;
+
+    margin: 20px 0;
+}
+
+
+.contenido li {
+    padding: 5px 0;
+
+    color: #d0d0d4;
+}
+
+
+.precio {
+    font-size: 27px;
+
+    font-weight: bold;
+
+    color: #ff7a00;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   DIAMANTES
+   ===================================================== */
+
+.diamantes {
+    background-color: #111116;
+
+    padding: 90px 7%;
+}
+
+
+.diamantes-contenedor {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.diamante {
+    background-color: #191920;
+
+    border: 1px solid #30303a;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.diamante:hover {
+    border-color: #00bfff;
+
+    transform: translateY(-5px);
+}
+
+
+.diamante span {
+    font-size: 40px;
+}
+
+
+.diamante h3 {
+    margin: 10px 0;
+}
+
+
+.diamante p {
+    color: #00bfff;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.diamante button {
+    background-color: #00bfff;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.diamante button:hover {
+    background-color: #008fcc;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   SEGURIDAD
+   ===================================================== */
+
+.seguridad {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.seguridad article {
+    background-color: #1d1d24;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #2d2d36;
+
+    transition: 0.3s;
+}
+
+
+.seguridad article:hover {
+    border-color: #ff7a00;
+}
+
+
+.seguridad span {
+    font-size: 30px;
+}
+
+
+.seguridad h3 {
+    margin: 12px 0;
+
+    color: #ff7a00;
+}
+
+
+.seguridad p {
+    color: #aaaab2;
+}
+
+
+/* =====================================================
+   MÉTODOS DE PAGO
+   ===================================================== */
+
+.pagos {
+    background-color: #0b0b0f;
+}
+
+
+.pagos-contenedor {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.pagos-contenedor article {
+    text-align: center;
+
+    background-color: #15151b;
+
+    border: 1px solid #292932;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.pagos-contenedor article:hover {
+    border-color: #ff7a00;
+
+    transform: translateY(-5px);
+}
+
+
+.pagos-contenedor span {
+    font-size: 35px;
+}
+
+
+.pagos-contenedor h3 {
+    margin: 10px 0;
+
+    color: #ff7a00;
+}
+
+
+.pagos-contenedor p {
+    color: #aaaab2;
+}
+
+
+/* =====================================================
+   FORMULARIO
+   ===================================================== */
+
+.contacto {
+    background-color: #15151b;
+}
+
+
+form {
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: #1c1c23;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid #30303a;
+}
+
+
+.campo {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #3a3a44;
+
+    border-radius: 7px;
+
+    background-color: #101015;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #ff7a00;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+form .boton {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+
+footer {
+    background-color: #08080b;
+
+    padding-top: 50px;
+}
+
+
+.footer-contenido {
+    width: 85%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+
+.footer-contenido h3 {
+    color: #ff7a00;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-contenido p {
+    color: #9999a2;
+}
+
+
+.footer-contenido a {
+    display: block;
+
+    color: #ccccd1;
+
+    margin: 7px 0;
+
+    transition: 0.3s;
+}
+
+
+.footer-contenido a:hover {
+    color: #ff7a00;
+}
+
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid #22222a;
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    color: #777780;
+}
+
+
+/* =====================================================
+   DISEÑO PARA TABLETS
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+
+    .encabezado {
+        flex-direction: column;
+
+        padding: 20px 0;
+
+        gap: 15px;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .tarjetas {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .diamantes-contenedor {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .seguridad {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .pagos-contenedor {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .footer-contenido {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   DISEÑO PARA CELULARES
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+
+    nav {
+        gap: 10px;
+
+        font-size: 14px;
+    }
+
+
+    .hero {
+        min-height: 520px;
+
+        padding: 40px 20px;
+    }
+
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjetas {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .diamantes-contenedor {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .seguridad {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .pagos-contenedor {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .footer-contenido {
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+    }
+
+
+    .seccion,
+    .diamantes,
+    .pagos,
+    .contacto {
+        padding: 60px 20px;
+    }
+
+
+    .titulo h2 {
+        font-size: 32px;
+    }
+
+}
